@@ -19,7 +19,7 @@ def conv_file_test():
 def conv_core_temp_test1():
     # currently linear so there are no edge cases
     test_array = [24,25,23,23,24,25,23,24,25,24,24,25,28,30,30,30,28,25,26,29,28,28,29,25,23,24,24,24,25,25]
-    assert cct.conv_core_temp(test_array) == 26.3
+    assert cct.conv_core_temperature(test_array) == 26.3
 
         
 def conv_core_temp_test2():
