@@ -37,19 +37,15 @@ def conv_core_temp(temp_array):
         return est_core_temp
 
 
-def conv_core_temp_test():
+def conv_core_temp_test1():
     # currently linear so there are no edge cases
     test_array = [24,25,23,23,24,25,23,24,25,24,24,25,28,30,30,30,28,25,26,29,28,28,29,25,23,24,24,24,25,25]
-    if conv_core_temp(test_array) == 26.3:
-        print "PASS"
-    else:
-        print "FAIL"
+    assert conv_core_temp(test_array) == 26.3:
 
+        
+def conv_core_temp_test2():
     test_array_2 = [-3,-2,-5,-3,-3,3,0]
-    if conv_core_temp(test_array_2) == "INVALID VALUE":
-        print "PASS"
-    else:
-        print "FAIL"
+    assert conv_core_temp(test_array_2) == "INVALID VALUE":
 
 
 def check_if_fever(est_core_temp):
@@ -60,17 +56,13 @@ def check_if_fever(est_core_temp):
     else:
         return False
 
-def check_if_fever_test():
+def check_if_fever_test1():
     # this ended up becoming a very simple check because I don't have a fully developed statistical model to judge this on yet
-    if check_if_fever(38) == True:
-        print "PASS"
-    else:
-        print "FAIL"
-
-    if check_if_fever(36.0) == False:
-        print "PASS"
-    else:
-        print "FAIL"
+    assert check_if_fever(38) == True:
+     
+    
+def check_if_fever_test12():
+    assert check_if_fever(36.0) == False:
 
 
 # MAIN
