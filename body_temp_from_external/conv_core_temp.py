@@ -16,7 +16,7 @@ def conv_file(file):
         return file_contents
 
 
-def conv_core_temp(temp_array):
+def conv_core_temperature(temp_array):
     average_temp = float(sum(temp_array) / max(temp_array))
     est_core_temp = average_temp * 1.052    # bad est b/c need external tmp etc.
     # core_temp = skin_temp + (heat_flux * (d/lambda) but can't get d and lamba sooooo
