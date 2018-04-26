@@ -6,7 +6,7 @@
 # File: conv_core_temp_test.py
 # Description: tests for conv_core_temp.py
 
-from .. import conv_core_temp_test
+from .. import conv_core_temp
 
 def conv_file_test():
     real_contents = [['24', '25', '23', '23', '24', '25'], ['23', '24', '25', '24', '24', '25'], ['28', '30', '30', '30', '28', '25'], ['26', '29', '28', '28', '29', '25'], ['23', '24', '24', '24', '25', '25']]
