@@ -17,6 +17,7 @@ from conv_core_temp import check_if_fever
 
 
 def test_conv_file():
+    """compares file to expected output of known file"""
     real_contents = [['24', '25', '23', '23', '24', '25'], ['23', '24', '25', '24', '24', '25'], ['28', '30', '30', '30', '28', '25'], ['26', '29', '28', '28', '29', '25'], ['23', '24', '24', '24', '25', '25']]
     est_contents = conv_file("data.csv")
     #print conv_file("data.csv")
@@ -25,21 +26,25 @@ def test_conv_file():
     assert est_contents == real_contents
     
 def test_1_conv_core_temp():
+    """compares known output average to calculated output average"""
     # currently linear so there are no edge cases
     test_array = [24,25,23,23,24,25,23,24,25,24,24,25,28,30,30,30,28,25,26,29,28,28,29,25,23,24,24,24,25,25]
     assert conv_core_temperature(test_array) == 26.3
 
         
 def test_2_conv_core_temp():
+    """compares to known value; known values should be INVALID"""
     test_array_2 = [-3,-2,-5,-3,-3,3,0]
     assert conv_core_temperature(test_array_2) == "INVALID VALUE"
     
 def test_1_check_if_fever():
+    """confirms values higher than set temp return true; uses int"""
     # this ended up becoming a very simple check because I don't have a fully developed statistical model to judge this on yet
     assert check_if_fever(38) == True
      
     
 def test_2_check_if_fever():
+    """confirms vlaues lower than set temp return false; uses float"""
     assert check_if_fever(36.0) == False
     
 # MAIN
