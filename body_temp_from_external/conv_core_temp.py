@@ -21,7 +21,7 @@ def conv_file(file):
 def conv_core_temperature(temp_array):
     """converts array of temperature values to an average value
     args: array of temperatures as floats or ints"""
-    average_temp = float(sum(temp_array) / max(temp_array))
+    average_temp = float(sum(temp_array)) / float(max(temp_array))
     est_core_temp = average_temp * 1.052    # bad est b/c need external tmp etc.
     # core_temp = skin_temp + (heat_flux * (d/lambda) but can't get d and lamba sooooo
     # upon further inspection may need to have it learn this based on known datasets....
