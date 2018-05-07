@@ -8,12 +8,7 @@
 
 import pytest
 
-import sys 
-sys.path.append("..") # Adds higher directory to python modules path.
-
-from conv_core_temp import conv_file 
-from conv_core_temp import conv_core_temperature 
-from conv_core_temp import check_if_fever 
+from ..conv_core_temp import conv_file, conv_core_temperature, check_if_fever 
 
 
 def test_conv_file():
