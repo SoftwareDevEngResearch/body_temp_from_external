@@ -30,15 +30,4 @@ def conv_core_temperature(temp_array):
     else:
         return est_core_temp
 
-
-def check_if_fever(est_core_temp):
-    """checks if temperature is above fever threshold or not
-    args: estimated core temperature
-    add: other parameters to account for room temp, sweating, pulse, etc."""
-    # need statistical data to test this on so for now just returns if above or below a certain temp
-    temp_threshold = 37.0
-    if est_core_temp > temp_threshold:
-        return True
-    else:
-        return False
-    
+ 

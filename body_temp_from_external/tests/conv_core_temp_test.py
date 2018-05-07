@@ -8,7 +8,7 @@
 
 import pytest
 
-from ..conv_core_temp import conv_file, conv_core_temperature, check_if_fever 
+from ..conv_core_temp import conv_file, conv_core_temperature 
 
 
 #THIS TEST CURRENTLY DOES NOT WORK IN TRAVIS
@@ -32,16 +32,7 @@ def test_2_conv_core_temp():
     """compares to known value; known values should be INVALID"""
     test_array_2 = [-3,-2,-5,-3,-3,3,0]
     assert conv_core_temperature(test_array_2) == "INVALID VALUE"
-    
-def test_1_check_if_fever():
-    """confirms values higher than set temp return true; uses int"""
-    # this ended up becoming a very simple check because I don't have a fully developed statistical model to judge this on yet
-    assert check_if_fever(38) == True
      
-    
-def test_2_check_if_fever():
-    """confirms vlaues lower than set temp return false; uses float"""
-    assert check_if_fever(36.0) == False
     
 # MAIN
 if __name__ == '__main__':
